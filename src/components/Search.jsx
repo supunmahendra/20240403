@@ -4,9 +4,8 @@ export const Search = () => {
   return (
     <div className='searchMain'>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-        
+
         <div className='toggle'>
-            
             <div>
             <div className='toggleContainer'>
             <input type="checkbox" id='toggleInput' className='checkbocInput' />
@@ -23,7 +22,6 @@ export const Search = () => {
             </div>
             <div className='btnMain'>
                 <button className='btn' id='button'>Find!</button>
-
             </div>
         </div>
 
