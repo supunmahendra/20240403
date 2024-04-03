@@ -80,25 +80,47 @@
 }
 
 /*search*/
+
+
+.searchMain{
+  margin-top: 20px;
+  background-color: hsla(300, 9%, 84%, 0.25);
+  border-radius: 30px;
+}
+
+.toggle{
+  display: flex;
+  gap :10px;
+  background-color: transparent;
+  padding-left: 50px;
+  align-items: center;
+}
+
+.toggle div{
+    background-color: transparent;
+    margin-top: 10px;
+    align-items: center;
+}
+
+
 .searchContainer{
   font-size: 20px;
-  margin-top: 10px;
+  margin-top: 1px;
   display: grid;
-  padding-left: 25px;
-  padding-right: 25px;
-  padding-top: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
   padding-bottom: 15px;
-  grid-template-columns: 150px auto 150px;
+  grid-template-columns: auto 150px;
   border-radius: 60px;
   top:10px;
   width: 95%;
   place-items: center;
-  background-color: hsla(300, 9%, 84%, 0.25);
+  background-color: transparent;
 }
 
 .search{
   font-size: 20px;
- 
   display: flex;
   align-items: center;
   padding: 5px;
@@ -106,7 +128,13 @@
   width: 100%;
 }
 
-.searchContainer:focus-within {
+.selectSearch{
+  font-size: 20px;
+  background: transparent;
+  color:hsl(216, 33%, 41%) ;
+}
+
+.searchMain:focus-within {
   box-shadow: 0 0 2px hsla(0, 0%, 0%, 0.8);
 }
 .searchText{
@@ -122,4 +150,84 @@
 
 .searchText::placeholder,.searchIcon {
   color: hsla(0, 0%, 0%, 0.7);
+}
+
+.btn{
+  display: flex;
+  height: 30px;
+  width: 100px;
+  background-color:hsla(143, 87%, 33%, 0.25) ;
+  font-size: 20px;
+  color:hsl(216, 33%, 41%) ;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px; 
+
+}
+
+.btn:hover{
+  background-color:hsla(143, 87%, 33%, 0.5) ;
+}
+
+
+.btnMain{
+  background: transparent;
+}
+
+@media (max-width: 450px) {
+  .searchContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+
+@media screen {
+  .search{
+    display: flex;
+    width: 90%;
+    margin: auto;
+  }
+}
+
+/*toggle*/
+
+
+.toggleContainer{
+  width: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.buttonToggle{
+  background-color: hsl(300, 9%, 84%);
+  width: 60px;
+  height: 30px;
+  border-radius: 80px;
+  cursor: pointer;
+  position: relative;
+}
+
+.buttonToggle::before{
+  position: absolute;
+  content: '';
+  background-color: hsla(143, 87%, 33%, 0.5);
+  width: 24px;
+  height: 24px;
+  border-radius: 60px;
+  margin: 3px;
+  transition: 0.3s;
+}
+
+input:checked+.buttonToggle{
+  background-color: hsl(300, 9%, 84%);
+}
+
+input:checked+.buttonToggle::before{
+  transform: translateX(-30px);
+}
+
+.checkbocInput{
+  display: none;
 }
