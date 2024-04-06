@@ -37,12 +37,10 @@ export const WriteOneMenue = ({oneselectMeal, A, isToggled}) => {
                             </del>
                             <h1 className='h1'>preparation method</h1>
                             <p>From {item.strInstructions}</p>
-        
                     </del>
-                )))  
-    
+                )))     
           ):(
-            <p className='h1'>Can't find a recipes according to your search</p>
+            <p className='h1'>Can't find Fetch data!</p>
         )
         
         }
