@@ -21,9 +21,9 @@ export const Home = () => {
   const [selectMeal,error,isloaded] = FetchMenu(isToggled,searchedText)
   const [selectMealS,errorS,isloadedS] = Rfetch(B)
 
-  console.log(selectMealS)
-
-  console.log(error)
+  //console.log(selectMealS)
+  console.log(selectMeal)
+  //console.log(error)
 
 
 
@@ -42,7 +42,7 @@ export const Home = () => {
   setA(0)
     const text =document.getElementById("searchInput").value
     SetSearchText(text)
-    console.log(text)
+    //console.log(text)
   }
 
   const onSelectCatagory = (value)=>{
@@ -57,14 +57,14 @@ const onSelectMeal = (value)=>{
     
     setOneSelectMeal(filterdMenu)
     setA(1)
-    console.log(oneSelectMeal)
+    //console.log(oneSelectMeal)
 
   } else {
     const filterdMenu = selectMeal.filter((menu)=>(menu.strMeal === value))
     
     setOneSelectMeal(filterdMenu)
     setA(2)
-    console.log(oneSelectMeal)
+    //console.log(oneSelectMeal)
   }
 }
 

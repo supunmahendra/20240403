@@ -17,6 +17,7 @@ export const WriteList = ({selectMeal, onSelectMeal, A , isToggled}) => {
               <del className='discription'>
                 <h1 className='h1'>{item.strMeal}</h1>
                 <p className='h1'> From {item.strArea}</p>
+                <p className='h1'> {item.strCategory} Dish</p>
               </del>
               
       
@@ -31,6 +32,9 @@ export const WriteList = ({selectMeal, onSelectMeal, A , isToggled}) => {
               <del className='discription'>
                   <h1 className='h1'>{item.strDrink}</h1>
                   <p className='h2'> {item.strAlcoholic} <sapn className='h2' > {item.strCategory}</sapn></p>
+                  <p className='h2'> Served in <sapn className='h2' > {item.strGlass}</sapn></p>
+                  
+
               </del>
       
             </del>
