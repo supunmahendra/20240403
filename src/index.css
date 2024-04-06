@@ -249,7 +249,7 @@ input:checked+.buttonToggle::before{
   box-shadow: 0 0 2px hsla(0, 0%, 0%, 0.8);
 }
 
-.mealContainer del{
+.mealContainer div{
   background: transparent;
 }
 
@@ -323,3 +323,25 @@ input:checked+.buttonToggle::before{
   text-align: justify;
   background: transparent;
 }
+
+.toggle div{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-right: 35px;
+}
+
+.toggle {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+@media (max-width: 450px) {
+  .toggle{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+

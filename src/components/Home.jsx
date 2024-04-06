@@ -22,7 +22,7 @@ export const Home = () => {
   const [selectMealS,errorS,isloadedS] = Rfetch(B)
 
   //console.log(selectMealS)
-  console.log(selectMeal)
+  //console.log(selectMeal)
   //console.log(error)
 
 
@@ -32,6 +32,7 @@ export const Home = () => {
     setB(C)
     setA(2)
     setOneSelectMeal(selectMealS)
+   
    }
   
  const Back=()=>{

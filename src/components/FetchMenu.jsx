@@ -45,12 +45,6 @@ export const FetchMenu = (isToggled,searchedText) => {
 
         fetchMeals();
 
-        
-
-
-
-
-
     },[isToggled,searchedText])
 
     
