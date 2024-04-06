@@ -17,7 +17,7 @@
   border: none;
   outline: none;
   letter-spacing: 1px;
-  background-color: antiquewhite;
+  background-color: rgb(248, 246, 243);
 }
 
 .container{
@@ -84,16 +84,17 @@
 
 .searchMain{
   margin-top: 20px;
-  background-color: hsla(300, 9%, 84%, 0.25);
+  background-color: hsla(300, 9%, 84%, 0.4);
   border-radius: 30px;
 }
 
 .toggle{
   display: flex;
-  gap :10px;
+  gap :20px;
   background-color: transparent;
   padding-left: 50px;
   align-items: center;
+  
 }
 
 .toggle div{
@@ -230,4 +231,95 @@ input:checked+.buttonToggle::before{
 
 .checkbocInput{
   display: none;
+}
+
+
+/*write list*/
+
+.mealContainer{
+  display: flex;
+  gap: 2vw;
+  margin-top: 20px;
+  background-color: hsla(300, 9%, 84%, 0.4);
+  border-radius: 30px;
+}
+
+
+.mealContainer:hover {
+  box-shadow: 0 0 2px hsla(0, 0%, 0%, 0.8);
+}
+
+.mealContainer del{
+  background: transparent;
+}
+
+.mealImg{
+  padding: 15px;
+  width: 15vw;
+  border-radius: 40px;
+  background: transparent;
+}
+
+.discription{
+  text-align: left;
+  margin-top: 25px;
+  background: transparent;
+}
+
+.h1{
+  background: transparent;
+  font-size: 30px;
+  color:hsl(216, 33%, 41%) ;
+}
+
+
+
+.discription p{
+  background: transparent;
+  font-size: 20px;
+  color:hsl(216, 33%, 41%) ;
+}
+
+.h2{
+  
+  background: transparent;
+}
+
+
+@media (max-width: 450px) {
+
+  .mealImg{
+    width: 30vw;
+    border-radius: 25px;
+  }
+
+  .h1{
+  
+    font-size: 20px;
+   
+  }
+
+  .discription p{
+    
+    font-size: 15px;
+  }
+  
+}
+
+.mealImgSingle{
+  padding: 15px;
+  width: 30vw;
+  border-radius: 40px;
+  background: transparent;
+}
+
+.foot{
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.mealContainerSingle{
+  text-align: justify;
+  background: transparent;
 }
