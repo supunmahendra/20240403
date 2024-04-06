@@ -13,20 +13,25 @@ export const Home = () => {
   const [searchedText,SetSearchText] = useState("Chicken");
   const [oneSelectMeal, setOneSelectMeal] =useState ([]);
   const [A, setA] =useState (0);
-  console.log(A)
+  const [B, setB] =useState (0);
+  //console.log(A)
   
  
 
-  const [selectMeal,error] = FetchMenu(isToggled,searchedText)
+  const [selectMeal,error,isloaded] = FetchMenu(isToggled,searchedText)
+  const [selectMealS,errorS,isloadedS] = Rfetch(B)
 
-  console.log(selectMeal)
+  console.log(selectMealS)
+
   console.log(error)
 
 
 
   const Random=()=>{
-    setA(3)
-   
+    const C =B+2
+    setB(C)
+    setA(2)
+    setOneSelectMeal(selectMealS)
    }
   
  const Back=()=>{
@@ -47,15 +52,15 @@ export const Home = () => {
 
 const onSelectMeal = (value)=>{
 
-  if(selectMeal.meals){
-    const filterdMenu = selectMeal.meals.filter((menu)=>(menu.strMeal === value))
+  if(isToggled){
+    const filterdMenu = selectMeal.filter((menu)=>(menu.strDrink === value))
     
     setOneSelectMeal(filterdMenu)
     setA(1)
     console.log(oneSelectMeal)
 
-  } else if(selectMeal.drinks){
-    const filterdMenu = selectMeal.drinks.filter((menu)=>(menu.strDrink === value))
+  } else {
+    const filterdMenu = selectMeal.filter((menu)=>(menu.strMeal === value))
     
     setOneSelectMeal(filterdMenu)
     setA(2)
@@ -77,21 +82,22 @@ const onSelectMeal = (value)=>{
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
         <div className='toggle'>
-            
-            <Toggle id="toggleInput" checked={this} onSelectCatagory={onSelectCatagory}></Toggle>
+            <div>
+                         <Toggle id="toggleInput" checked={this} onSelectCatagory={onSelectCatagory}></Toggle>
                        
-            <div className='selectSearch'id='selectCatagory' >
-              {(isToggled) ? <div>Cocktail Recipes</div>:<div>Meal Recipes </div>}
+                       <div className='selectSearch'id='selectCatagory' >
+                         {(isToggled) ? <div>Cocktail Recipes</div>:<div>Meal Recipes </div>}
+                       </div>
             </div>
+            <div>
+                  <div className='btnMain'>
+                      <button className='btn' id='button' onClick={Back}>Back</button>
+                  </div>
 
-            <div className='btnMain'>
-                <button className='btn' id='button' onClick={Back}>Back</button>
+                  <div className='btnMain'>
+                      <button className='btn' id='button' onClick={Random}>Random</button>
+                  </div>
             </div>
-
-            <div className='btnMain'>
-                <button className='btn' id='button' onClick={Random}>Random</button>
-            </div>
-            
         </div>
         
         <div className='searchContainer'>
@@ -107,8 +113,8 @@ const onSelectMeal = (value)=>{
 
           <div>
 
-          <WriteList selectMeal={selectMeal} onSelectMeal ={onSelectMeal} A={A}></WriteList>
-          <WriteOneMenue oneselectMeal={oneSelectMeal} A={A}></WriteOneMenue>
+          <WriteList selectMeal={selectMeal} onSelectMeal ={onSelectMeal} A={A} isToggled={isToggled}></WriteList>
+          <WriteOneMenue oneselectMeal={oneSelectMeal} A={A} isToggled={isToggled}></WriteOneMenue>
           </div>
       <div className='foot'>
       <p> © Copyright Supun Mahendra || All Rights Reserved</p>
