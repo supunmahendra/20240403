@@ -345,3 +345,9 @@ input:checked+.buttonToggle::before{
   }
 }
 
+.i{
+  background: transparent;
+  font-size: 30px;
+  color:hsl(216, 33%, 41%) ;
+  margin-left: 20px;
+}
